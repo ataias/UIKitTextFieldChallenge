@@ -16,12 +16,15 @@ class ViewController: UIViewController {
 
     let zipCodeDelegate = ZipCodeTextFieldDelegate()
     let cashAmountDelegate = CashAmountTextFieldDelegate()
+    let lockableTextDelegate = LockableTextFieldDelegate()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         zipCode.delegate = zipCodeDelegate
         cashAmount.delegate = cashAmountDelegate
 
+        lockableTextDelegate.lockableTextSwitch = lockableTextSwitch
+        lockableText.delegate = lockableTextDelegate
     }
 
 
